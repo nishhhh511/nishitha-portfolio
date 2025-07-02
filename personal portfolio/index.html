@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nishitha Shri S R | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="js/script.js"></script>
+  <link rel="icon" type="image/svg+xml" href="https://avatars.githubusercontent.com/u/138383942?v=4">
+  <style>
+    body { font-family: 'Montserrat', 'Poppins', Arial, sans-serif; }
+    html { scroll-behavior: smooth; }
+    .tooltip { position: relative; }
+    .tooltip .tooltip-text { display: none; position: absolute; bottom: 125%; left: 50%; transform: translateX(-50%); background: #222; color: #fff; padding: 4px 10px; border-radius: 6px; font-size: 0.85rem; white-space: nowrap; z-index: 10; }
+    .tooltip:hover .tooltip-text { display: block; }
+    .scroll-to-top { position: fixed; bottom: 2rem; right: 2rem; z-index: 50; display: none; }
+    .show-scroll { display: block !important; }
+    .active-nav { color: #2563eb !important; font-weight: 700; }
+    .animate-fade-in-up { opacity: 0; transform: translateY(30px); animation: fadeInUp 0.8s forwards; animation-play-state: paused; }
+    .animate-fade-in-up.delay-100 { animation-delay: 0.1s; }
+    .animate-fade-in-up.delay-200 { animation-delay: 0.2s; }
+    @keyframes fadeInUp { to { opacity: 1; transform: none; } }
+    .typing::after { content: '|'; animation: blink 1s infinite; }
+    @keyframes blink { 0%,100%{opacity:1;} 50%{opacity:0;} }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+  <!-- Navbar -->
+  <header class="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur shadow-sm">
+    <nav class="max-w-6xl mx-auto flex items-center justify-between py-3 px-4">
+      <div class="flex items-center gap-2">
+        <span class="font-bold text-xl text-blue-700">Nishitha Shri S R</span>
+      </div>
+      <ul class="hidden md:flex gap-6 font-medium" id="navbar-links">
+        <li><a href="#hero" class="hover:text-blue-600 transition">Home</a></li>
+        <li><a href="#about" class="hover:text-blue-600 transition">About</a></li>
+        <li><a href="#skills" class="hover:text-blue-600 transition">Skills</a></li>
+        <li><a href="#projects" class="hover:text-blue-600 transition">Projects</a></li>
+        <li><a href="#certifications" class="hover:text-blue-600 transition">Certifications</a></li>
+        <li><a href="#education" class="hover:text-blue-600 transition">Education</a></li>
+        <li><a href="#achievements" class="hover:text-blue-600 transition">Achievements</a></li>
+        <li><a href="#contact" class="hover:text-blue-600 transition">Contact</a></li>
+      </ul>
+      <div class="flex items-center gap-3">
+        <span class="tooltip"><a href="https://github.com/nishhhh511" target="_blank" title="GitHub" class="hover:scale-110 transition"><img src="https://img.icons8.com/ios-glyphs/28/000000/github.png" alt="GitHub" class="dark:invert"/></a><span class="tooltip-text">GitHub</span></span>
+        <span class="tooltip"><a href="https://www.linkedin.com/in/nishitha-shri" target="_blank" title="LinkedIn" class="hover:scale-110 transition"><img src="https://img.icons8.com/ios-filled/28/000000/linkedin.png" alt="LinkedIn" class="dark:invert"/></a><span class="tooltip-text">LinkedIn</span></span>
+        <span class="tooltip"><a href="https://leetcode.com/u/nishh511/" target="_blank" title="LeetCode" class="hover:scale-110 transition"><img src="https://img.icons8.com/external-tal-revivo-filled-tal-revivo/28/000000/external-level-up-your-coding-skills-and-quickly-land-a-job-logo-filled-tal-revivo.png" alt="LeetCode"/></a><span class="tooltip-text">LeetCode</span></span>
+        <span class="tooltip"><a href="https://www.hackerrank.com/profile/ns1969" target="_blank" title="HackerRank" class="hover:scale-110 transition"><img src="https://img.icons8.com/windows/28/000000/hackerrank.png" alt="HackerRank"/></a><span class="tooltip-text">HackerRank</span></span>
+        <button id="theme-toggle" class="ml-2 p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-800 text-xl" title="Toggle dark mode">🌙</button>
+        <button id="mobile-menu-btn" class="md:hidden ml-2 p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-800"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg></button>
+      </div>
+    </nav>
+    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
+      <ul class="flex flex-col gap-3 font-medium">
+        <li><a href="#hero" class="hover:text-blue-600 transition">Home</a></li>
+        <li><a href="#about" class="hover:text-blue-600 transition">About</a></li>
+        <li><a href="#skills" class="hover:text-blue-600 transition">Skills</a></li>
+        <li><a href="#projects" class="hover:text-blue-600 transition">Projects</a></li>
+        <li><a href="#certifications" class="hover:text-blue-600 transition">Certifications</a></li>
+        <li><a href="#education" class="hover:text-blue-600 transition">Education</a></li>
+        <li><a href="#achievements" class="hover:text-blue-600 transition">Achievements</a></li>
+        <li><a href="#contact" class="hover:text-blue-600 transition">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="relative flex flex-col items-center justify-start min-h-[60vh] pt-10 text-center px-4 bg-gradient-to-b from-blue-100 via-white to-white dark:from-gray-900 dark:via-gray-900 dark:to-gray-800 overflow-hidden">
+    <!-- Decorative Top SVG Wave -->
+    <svg class="absolute top-0 left-0 w-full" viewBox="0 0 1440 120"><path fill="#2563eb" fill-opacity="0.08" d="M0,16L1440,64L1440,0L0,0Z"></path></svg>
+    <!-- Welcome Badge -->
+    <span class="relative z-10 inline-block bg-blue-700 text-white px-4 py-1 rounded-full text-sm font-semibold shadow mb-4 animate-fade-in-up">Welcome!</span>
+    <img src="https://avatars.githubusercontent.com/u/138383942?v=4" alt="Nishitha Shri S R" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg border-4 border-blue-200 relative z-10 animate-fade-in-up delay-100">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 animate-fade-in-up delay-150 relative z-10">Hi, I'm <span class="text-blue-700">Nishitha Shri S R</span></h1>
+    <h2 class="text-xl md:text-2xl font-medium mb-2 animate-fade-in-up delay-200 typing relative z-10" id="typing-text">Pre-final year B.Tech CSE (AI & ML) @ SRM Institute of Science and Technology</h2>
+    <p class="text-lg text-gray-600 dark:text-gray-300 mb-4 animate-fade-in-up delay-300 relative z-10">Aspiring AI/ML Engineer | Web Developer | IoT Enthusiast</p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center mb-6 animate-fade-in-up delay-400 relative z-10">
+      <a href="#contact" class="inline-block bg-blue-700 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-800 transition font-semibold">Contact Me</a>
+      <a href="resume.pdf" download class="inline-block bg-white text-blue-700 border border-blue-700 px-6 py-3 rounded-lg shadow hover:bg-blue-700 hover:text-white transition font-semibold">Download Resume</a>
+    </div>
+    <!-- Animated Down Arrow -->
+    <div class="absolute left-1/2 transform -translate-x-1/2 bottom-24 md:bottom-20 z-10 animate-bounce">
+      <svg width="32" height="32" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+    </div>
+    <!-- Decorative Bottom SVG Wave -->
+    <svg class="absolute bottom-0 left-0 w-full" viewBox="0 0 1440 120"><path fill="#2563eb" fill-opacity="0.08" d="M0,64L1440,16L1440,120L0,120Z"></path></svg>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="max-w-4xl mx-auto py-12 px-4">
+    <h2 class="text-3xl font-bold mb-4 text-blue-700">About</h2>
+    <p class="text-lg mb-2">I'm a passionate CSE (AI & ML) student with a strong interest in web development, AI/ML, and IoT. I love building impactful projects and collaborating with teams to solve real-world problems.</p>
+    <ul class="text-md text-gray-700 dark:text-gray-300">
+      <li><strong>Email:</strong> <a href="mailto:rdnish05@gmail.com" class="text-blue-700 hover:underline">rdnish05@gmail.com</a></li>
+      <li><strong>Phone:</strong> <a href="tel:+918778043171" class="text-blue-700 hover:underline">+91 8778043171</a></li>
+    </ul>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="bg-white dark:bg-gray-800 py-12 px-4">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold mb-6 text-blue-700">Skills</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="bg-blue-50 dark:bg-gray-700 rounded-lg p-4 shadow hover:scale-110 hover:shadow-2xl transition">
+          <h3 class="font-semibold text-blue-700 mb-2">Programming</h3>
+          <ul class="text-sm">
+            <li>Python</li>
+            <li>C</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Java (basic)</li>
+          </ul>
+        </div>
+        <div class="bg-blue-50 dark:bg-gray-700 rounded-lg p-4 shadow hover:scale-110 hover:shadow-2xl transition">
+          <h3 class="font-semibold text-blue-700 mb-2">Tools</h3>
+          <ul class="text-sm">
+            <li>Git</li>
+            <li>Canva</li>
+            <li>Arduino IDE</li>
+          </ul>
+        </div>
+        <div class="bg-blue-50 dark:bg-gray-700 rounded-lg p-4 shadow hover:scale-110 hover:shadow-2xl transition">
+          <h3 class="font-semibold text-blue-700 mb-2">Domains</h3>
+          <ul class="text-sm">
+            <li>Web Dev</li>
+            <li>AI/ML</li>
+            <li>IoT</li>
+          </ul>
+        </div>
+        <div class="bg-blue-50 dark:bg-gray-700 rounded-lg p-4 shadow hover:scale-110 hover:shadow-2xl transition">
+          <h3 class="font-semibold text-blue-700 mb-2">Soft Skills</h3>
+          <ul class="text-sm">
+            <li>Communication</li>
+            <li>Teamwork</li>
+            <li>Time Management</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-12 px-4 bg-gradient-to-b from-white to-blue-50 dark:from-gray-800 dark:to-gray-900">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold mb-8 text-blue-700 text-center">Projects</h2>
+      <div class="grid gap-8 md:grid-cols-3 sm:grid-cols-2 grid-cols-1">
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 hover:scale-110 hover:shadow-2xl transition group relative overflow-hidden project-card">
+          <h3 class="text-xl font-semibold text-blue-700 mb-2 group-hover:underline">Smart Wellness Web App</h3>
+          <p class="text-gray-700 dark:text-gray-300">Built with HTML, CSS, Python. Responsive design. UI with Canva.</p>
+        </div>
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 hover:scale-110 hover:shadow-2xl transition group relative overflow-hidden project-card">
+          <h3 class="text-xl font-semibold text-blue-700 mb-2 group-hover:underline">Student-Staff Meeting Portal</h3>
+          <p class="text-gray-700 dark:text-gray-300">Book faculty meetings with chat/timetable sync.</p>
+        </div>
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 hover:scale-110 hover:shadow-2xl transition group relative overflow-hidden project-card">
+          <h3 class="text-xl font-semibold text-blue-700 mb-2 group-hover:underline">Humidity Detection Pacifier (IoT)</h3>
+          <p class="text-gray-700 dark:text-gray-300">Arduino + humidity sensor + Python backend.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications Section -->
+  <section id="certifications" class="max-w-4xl mx-auto py-12 px-4">
+    <h2 class="text-3xl font-bold mb-6 text-blue-700">Certifications</h2>
+    <div class="flex flex-wrap gap-4">
+      <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-semibold text-sm shadow">HTML/CSS (Udemy)</span>
+      <span class="bg-green-100 text-green-800 px-4 py-2 rounded-full font-semibold text-sm shadow">DSA/MySQL (Coursera)</span>
+      <span class="bg-purple-100 text-purple-800 px-4 py-2 rounded-full font-semibold text-sm shadow">Azure AI</span>
+      <span class="bg-yellow-100 text-yellow-800 px-4 py-2 rounded-full font-semibold text-sm shadow">OOP</span>
+      <span class="bg-orange-100 text-orange-800 px-4 py-2 rounded-full font-semibold text-sm shadow">Oracle</span>
+      <span class="bg-pink-100 text-pink-800 px-4 py-2 rounded-full font-semibold text-sm shadow">Fortinet</span>
+      <span class="bg-gray-200 text-gray-800 px-4 py-2 rounded-full font-semibold text-sm shadow">IIRS (Geo-AI)</span>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="max-w-4xl mx-auto py-12 px-4">
+    <h2 class="text-3xl font-bold mb-6 text-blue-700">Education</h2>
+    <ul class="space-y-2">
+      <li><span class="font-semibold">SRM IST</span> – CGPA: 8.75</li>
+      <li><span class="font-semibold">Velammal Vidyashram</span> – 84% (XII)</li>
+      <li><span class="font-semibold">Narayana E-techno</span> – 93% (X)</li>
+    </ul>
+  </section>
+
+  <!-- Achievements & Clubs Section -->
+  <section id="achievements" class="max-w-4xl mx-auto py-12 px-4">
+    <h2 class="text-3xl font-bold mb-6 text-blue-700">Achievements & Clubs</h2>
+    <ul class="list-disc pl-6 mb-4">
+      <li>HackStreet 3.0 Finalist</li>
+      <li>Pentathon 2.0 Participant</li>
+    </ul>
+    <div class="font-medium">Member, Directorate of Student Affairs Club, SRMIST</div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="bg-white dark:bg-gray-800 py-12 px-4">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6 text-blue-700">Contact</h2>
+      <p class="mb-4">Feel free to reach out for collaboration or just a friendly hello!</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-6 mb-6">
+        <a href="mailto:rdnish05@gmail.com" class="flex items-center gap-2 bg-blue-700 text-white px-5 py-3 rounded-lg shadow hover:bg-blue-800 transition"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12H8m8 0a4 4 0 11-8 0 4 4 0 018 0zm0 0v4m0-4V8" /></svg>Email</a>
+        <a href="tel:+918778043171" class="flex items-center gap-2 bg-blue-100 text-blue-700 px-5 py-3 rounded-lg shadow hover:bg-blue-200 transition"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H5a2 2 0 01-2-2V5zm0 10a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H5a2 2 0 01-2-2v-2zm10-10a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zm0 10a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" /></svg>Phone</a>
+      </div>
+      <form class="max-w-lg mx-auto bg-gray-100 dark:bg-gray-700 rounded-lg p-6 shadow space-y-4">
+        <div class="flex flex-col text-left">
+          <label for="name" class="font-semibold mb-1">Name</label>
+          <input type="text" id="name" name="name" class="rounded px-3 py-2 border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Your Name" required>
+        </div>
+        <div class="flex flex-col text-left">
+          <label for="email" class="font-semibold mb-1">Email</label>
+          <input type="email" id="email" name="email" class="rounded px-3 py-2 border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="you@email.com" required>
+        </div>
+        <div class="flex flex-col text-left">
+          <label for="message" class="font-semibold mb-1">Message</label>
+          <textarea id="message" name="message" rows="3" class="rounded px-3 py-2 border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Your message..." required></textarea>
+        </div>
+        <button type="submit" class="w-full bg-blue-700 text-white py-2 rounded-lg font-semibold hover:bg-blue-800 transition">Send Message</button>
+      </form>
+      <div class="flex justify-center gap-6 mt-8">
+        <span class="tooltip"><a href="https://github.com/nishhhh511" target="_blank" title="GitHub" class="hover:scale-110 transition"><img src="https://img.icons8.com/ios-glyphs/32/000000/github.png" alt="GitHub" class="dark:invert"/></a><span class="tooltip-text">GitHub</span></span>
+        <span class="tooltip"><a href="https://www.linkedin.com/in/nishitha-shri" target="_blank" title="LinkedIn" class="hover:scale-110 transition"><img src="https://img.icons8.com/ios-filled/32/000000/linkedin.png" alt="LinkedIn" class="dark:invert"/></a><span class="tooltip-text">LinkedIn</span></span>
+        <span class="tooltip"><a href="https://leetcode.com/u/nishh511/" target="_blank" title="LeetCode" class="hover:scale-110 transition"><img src="https://img.icons8.com/external-tal-revivo-filled-tal-revivo/32/000000/external-level-up-your-coding-skills-and-quickly-land-a-job-logo-filled-tal-revivo.png" alt="LeetCode"/></a><span class="tooltip-text">LeetCode</span></span>
+        <span class="tooltip"><a href="https://www.hackerrank.com/profile/ns1969" target="_blank" title="HackerRank" class="hover:scale-110 transition"><img src="https://img.icons8.com/windows/32/000000/hackerrank.png" alt="HackerRank"/></a><span class="tooltip-text">HackerRank</span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollToTopBtn" class="scroll-to-top bg-blue-700 text-white p-3 rounded-full shadow-lg hover:bg-blue-800 transition"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" /></svg></button>
+
+  <!-- Footer -->
+  <footer class="bg-blue-700 text-white py-4 mt-8">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between px-4">
+      <div class="mb-2 md:mb-0">&copy; 2024 Nishitha Shri S R. All rights reserved.</div>
+      <div class="flex gap-4">
+        <span class="text-sm">Achievements: HackStreet 3.0 Finalist, Pentathon 2.0 Participant</span>
+        <span class="text-sm hidden sm:inline">| Certifications: HTML/CSS (Udemy), DSA/MySQL (Coursera), Azure AI, OOP, Oracle, Fortinet, IIRS (Geo-AI)</span>
+        <span class="text-sm hidden sm:inline">| Club: Directorate of Student Affairs Club, SRMIST</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html> 
